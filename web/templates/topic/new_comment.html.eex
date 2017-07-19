@@ -1,0 +1,6 @@
+<%= form_for @changeset, topic_path(@conn, :insertcomment, @topic_id), fn f-> %>
+<div class="form-group">
+  <%= text_input f, :content, placeholder: "Comment", class: "form-control" %>
+  <%= submit "Comment!", class: "btn btn-primary" %>
+</div>
+<% end %>

@@ -1,0 +1,4 @@
+
+<%= link to: garbage_path(@conn, :name, @link, @name, g: @g) do %>
+Hello
+<%= end %>

@@ -1,0 +1,16 @@
+<h2><%= @topic.title %></h2>
+<table>
+  <tr>
+    <td>Comment</td>
+    <td></td>
+  </tr>
+<%= for comment <- @comments do %>
+<tr>
+<td><%= comment.content %></td>
+<td>
+<%= link "Delete", to: topic_path(@conn, :deletecomment, comment.id) %>
+</td>
+</tr>
+<%= end %>
+</table>
+<%= link "Add Comment", to: topic_path(@conn, :newcomment, @topic.id) %>
